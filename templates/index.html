@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Startup Idea Graph</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="toolbar">
+  <div class="card">
+    <div class="tag">core-idea</div>
+    <textarea id="coreIdea" placeholder="输入你的startup核心想法"></textarea>
+    <button id="startBtn">项目启动</button>
+    <button id="healthBtn">检查密钥</button>
+  </div>
+  <div class="actions">
+    <button id="exportBtn">导出Markdown</button>
+  </div>
+</div>
+  <div id="graph"></div>
+  <div class="inspector" id="inspector">
+    <div class="ins-title">节点编辑</div>
+    <div class="ins-row">名称：<span id="insName"></span></div>
+    <div class="ins-row">类型：<span id="insType"></span></div>
+    <textarea id="insContent" placeholder="更新此节点的内容"></textarea>
+    <div class="ins-actions">
+      <button id="insSave">保存更新</button>
+      <button id="insExpand">展开一层</button>
+      <button id="insCancel">取消</button>
+    </div>
+  </div>
+  <script src="/static/main.js"></script>
+</body>
+</html>
